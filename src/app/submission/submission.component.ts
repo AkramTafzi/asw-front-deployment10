@@ -67,7 +67,7 @@ export class SubmissionComponent implements OnInit {
     };
 
     const response = await fetch(
-      environment.BASE_URL + '/news/' + btnid + '/like',
+      "https://asw-back-deployment-production-7eb3.up.railway.app" + '/news/' + btnid + '/like',
       {
         method: 'PUT',
         headers: {
@@ -88,7 +88,7 @@ export class SubmissionComponent implements OnInit {
     console.log(id);
 
     const response = await fetch(
-      environment.BASE_URL + '/comment/' + id + '/like',
+      "https://asw-back-deployment-production-7eb3.up.railway.app" + '/comment/' + id + '/like',
       {
         method: 'PUT',
         headers: {

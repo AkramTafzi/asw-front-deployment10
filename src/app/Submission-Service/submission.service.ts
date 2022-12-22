@@ -12,21 +12,21 @@ export class SubmissionService {
 
   public async getSubmission(id: string): Promise<News> {
     let submission = await this.http
-      .get<News>(environment.BASE_URL + '/news/' + id)
+      .get<News>("https://asw-back-deployment-production-7eb3.up.railway.app" + '/news/' + id)
       .toPromise();
     return submission as News;
   }
 
   public async getComments(idNews: string): Promise<Comments> {
     let comment = await this.http
-      .get<Comments>(environment.BASE_URL + '/comment/' + idNews)
+      .get<Comments>("https://asw-back-deployment-production-7eb3.up.railway.app" + '/comment/' + idNews)
       .toPromise();
     return comment as unknown as Comments;
   }
 
   public async getCommentaries(idNews: string): Promise<number[]> {
     let comments = await this.http
-      .get<Comments[]>(environment.BASE_URL + '/news/' + idNews + '/comments')
+      .get<Comments[]>("https://asw-back-deployment-production-7eb3.up.railway.app" + '/news/' + idNews + '/comments')
       .toPromise();
     return comments as unknown as number[];
   }

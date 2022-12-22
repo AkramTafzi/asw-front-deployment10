@@ -31,9 +31,9 @@ export class ReplyComponent implements OnInit {
 
     let id: string | null = localStorage.getItem('reply');
 
-    console.log(environment.BASE_URL + '/news/' + id + '/reply');
+    console.log("https://asw-back-deployment-production-7eb3.up.railway.app" + '/news/' + id + '/reply');
     const response = await fetch(
-      environment.BASE_URL + '/news/' + id + '/reply',
+      "https://asw-back-deployment-production-7eb3.up.railway.app" + '/news/' + id + '/reply',
       {
         method: 'PUT',
         headers: {

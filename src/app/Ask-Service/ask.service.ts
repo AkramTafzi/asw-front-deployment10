@@ -10,7 +10,7 @@ export class AskService {
   constructor(private http: HttpClient) { }
 
   public async getAsk(): Promise<News[]> {
-    let ask = await this.http.get<News[]>(environment.BASE_URL + "/ask").toPromise();
+    let ask = await this.http.get<News[]>("https://asw-back-deployment-production-7eb3.up.railway.app" + "/ask").toPromise();
     return ask as News[];
   }
 }

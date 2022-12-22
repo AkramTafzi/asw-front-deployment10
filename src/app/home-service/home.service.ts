@@ -11,7 +11,7 @@ export class HomeService {
 
   public async getNews(): Promise<News[]> {
     let news = await this.http
-      .get<News[]>(environment.BASE_URL + '/news')
+      .get<News[]>("https://asw-back-deployment-production-7eb3.up.railway.app" + '/news')
       .toPromise();
     return news as News[];
   }

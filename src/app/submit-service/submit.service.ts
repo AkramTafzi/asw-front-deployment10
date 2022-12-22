@@ -9,6 +9,6 @@ export class SubmitService {
 
   constructor(private http: HttpClient) { }
   public submit(news: any){
-    this.http.post<any>(environment.BASE_URL + "/submit", news).subscribe()
+    this.http.post<any>("https://asw-back-deployment-production-7eb3.up.railway.app" + "/submit", news).subscribe()
   }
 }

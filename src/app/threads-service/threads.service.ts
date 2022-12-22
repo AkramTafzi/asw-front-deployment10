@@ -12,7 +12,7 @@ export class ThreadsService {
   public async getThreads(): Promise<Comments[]> {
     let threads = await this.http
       .get<Comments[]>(
-        environment.BASE_URL +
+        "https://asw-back-deployment-production-7eb3.up.railway.app" +
           '/comment/user/' +
           localStorage.getItem('username')
       )

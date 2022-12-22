@@ -11,7 +11,7 @@ export class ShowService {
   constructor(private http: HttpClient) { }
 
   public async getShow(): Promise<News[]> {
-    let show = await this.http.get<News[]>(environment.BASE_URL + "/show").toPromise();
+    let show = await this.http.get<News[]>("https://asw-back-deployment-production-7eb3.up.railway.app" + "/show").toPromise();
     return show as News[];
   }
 }
