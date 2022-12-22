@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'asw-back-deployment-production-7eb3.up.railway.app',
+  BASE_URL: 'https://asw-back-deployment-production-7eb3.up.railway.app',
 };
 
 /*
